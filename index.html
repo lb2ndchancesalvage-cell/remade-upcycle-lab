@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReMade — AI-Assisted Upcycling Business Lab</title>
+<style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4f0e8;color:#26332c}
+body{background:light-dark(#f4f0e8,#151a17)}
+#app{min-height:100vh;background-color:light-dark(#f4f0e8,#151a17);color:light-dark(#26332c,#eef4ef)}
+.hero{padding:34px 7vw 28px;background:linear-gradient(135deg,light-dark(#dfe8d9,#243126),light-dark(#f5e9d1,#2b2921));border-bottom:1px solid light-dark(#c8d0c5,#3a443c)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:1120px;margin:auto}
+.brand{font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.badge{font-size:12px;padding:7px 11px;border:1px solid currentColor;border-radius:999px;opacity:.8}
+.hero-grid{max-width:1120px;margin:55px auto 20px;display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:end}
+h1{font-size:clamp(42px,7vw,76px);line-height:.93;margin:0 0 22px;letter-spacing:-.055em}
+.lead{font-size:19px;line-height:1.55;max-width:680px;margin:0}
+.stamp{padding:24px;border:1px solid currentColor;border-radius:20px;transform:rotate(2deg);font-weight:800;line-height:1.25;background:light-dark(#ffffff77,#ffffff0d)}
+main{max-width:1120px;margin:auto;padding:34px 7vw 70px}
+.section-title{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin:24px 0 13px;opacity:.7}
+.panel{background:light-dark(#fffdf8,#1d241f);border:1px solid light-dark(#d8d4ca,#39443c);border-radius:24px;padding:24px;box-shadow:0 8px 30px #0000000b}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+button{font:inherit;cursor:pointer;border:1px solid light-dark(#c9c6bc,#48534b);background:light-dark(#f1eee6,#242d27);color:inherit;padding:10px 14px;border-radius:12px;font-weight:750}
+button.active,button.primary{background:light-dark(#263d2f,#b8d3b8);color:light-dark(#fff,#172119);border-color:transparent}
+.tab{display:none}.tab.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{padding:20px;border-radius:18px;background:light-dark(#f3f0e7,#222a25);border:1px solid light-dark(#dfdbd0,#374139)}
+.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;line-height:1.5;font-size:14px}
+label{display:block;font-size:13px;font-weight:800;margin:14px 0 7px}input,select,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid light-dark(#cbc7bc,#4a564d);background:light-dark(#fff,#161c18);color:inherit;font:inherit}textarea{min-height:110px;resize:vertical}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.full{grid-column:1/-1}
+.result{margin-top:18px;padding:18px;border-radius:16px;background:light-dark(#e6eee2,#26352a);border-left:5px solid light-dark(#48694f,#9cc39e)}
+.result strong{font-size:22px}.muted{opacity:.72;font-size:13px;line-height:1.5}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.metric{padding:18px;border-radius:18px;background:light-dark(#fff,#1d241f);border:1px solid light-dark(#d8d4ca,#39443c)}.metric b{display:block;font-size:28px;letter-spacing:-.04em}.metric span{font-size:12px;opacity:.7}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:18px;border-top:3px solid light-dark(#55755b,#a5c5a8);background:light-dark(#f6f2e9,#202821);border-radius:0 0 16px 16px}.step b{display:block;margin-bottom:7px}
+footer{max-width:1120px;margin:auto;padding:0 7vw 50px;opacity:.7;font-size:13px;line-height:1.6}
+@media(max-width:780px){.hero-grid,.form-grid{grid-template-columns:1fr}.grid,.timeline{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr 1fr}.hero-grid{margin-top:35px}}
+@media(max-width:500px){.grid,.timeline{grid-template-columns:1fr}.hero{padding-top:24px}main{padding-top:20px}}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="hero">
+  <div class="nav"><div class="brand">ReMade / Upcycle Lab</div><div class="badge">AI-assisted business prototype</div></div>
+  <div class="hero-grid">
+    <div><h1>Turn old things into something worth keeping.</h1><p class="lead">A hands-on business concept for an independent upcycler: finding overlooked pieces, redesigning them, pricing the work, and telling the story behind the finished product.</p></div>
+    <div class="stamp">BUILT TO LEARN<br>• creative reuse<br>• small-business thinking<br>• AI-assisted workflows</div>
+  </div>
+</header>
+<main>
+  <div class="section-title">Project snapshot</div>
+  <div class="metrics"><div class="metric"><b>1→1</b><span>old piece → new product</span></div><div class="metric"><b>3</b><span>core business tools</span></div><div class="metric"><b>100%</b><span>independent concept</span></div><div class="metric"><b>∞</b><span>things worth rethinking</span></div></div>
+
+  <div class="panel">
+    <div class="tabs">
+      <button class="tabbtn active" data-tab="idea">Business idea</button>
+      <button class="tabbtn" data-tab="pricing">Pricing lab</button>
+      <button class="tabbtn" data-tab="story">Listing story</button>
+      <button class="tabbtn" data-tab="learning">What I built</button>
+    </div>
+
+    <section id="idea" class="tab active">
+      <div class="grid">
+        <div class="card"><h3>Source</h3><p>Rescue furniture, décor, fixtures, hardware, vintage pieces and usable materials that would otherwise be discarded.</p></div>
+        <div class="card"><h3>Transform</h3><p>Clean, repair, redesign, combine or repurpose the piece while keeping useful character and reducing waste.</p></div>
+        <div class="card"><h3>Sell</h3><p>Photograph the finished work, explain the transformation, price the labor and materials, and sell locally or online.</p></div>
+      </div>
+      <div class="result"><strong>The business is the transformation.</strong><div class="muted">The value is not only in the original object. It comes from sourcing, creative decisions, labor, materials, presentation and the story of giving something another life.</div></div>
+    </section>
+
+    <section id="pricing" class="tab">
+      <div class="form-grid">
+        <div><label>What did the original piece cost?</label><input id="cost" type="number" min="0" value="25"></div>
+        <div><label>Materials / supplies</label><input id="materials" type="number" min="0" value="35"></div>
+        <div><label>Hours of work</label><input id="hours" type="number" min="0" step=".5" value="4"></div>
+        <div><label>Target hourly rate</label><input id="rate" type="number" min="0" value="30"></div>
+        <div class="full"><button class="primary" id="calc">Calculate a starting price</button></div>
+      </div>
+      <div id="priceResult" class="result"><strong>$180</strong><div class="muted">Starting price = original cost + materials + labor. Adjust for uniqueness, condition, market demand and selling fees.</div></div>
+    </section>
+
+    <section id="story" class="tab">
+      <label>Finished piece</label><input id="item" value="Vintage cabinet turned into a statement storage piece">
+      <label>What makes it special?</label><textarea id="details">Original character preserved, repaired by hand, and redesigned for modern use.</textarea>
+      <button class="primary" id="generate">Create listing copy</button>
+      <div id="storyResult" class="result"><strong>Listing preview</strong><p class="muted">Enter a piece above and use the button to create a polished starting draft. The goal is to use AI as a creative assistant while keeping the maker's real story and decisions at the center.</p></div>
+    </section>
+
+    <section id="learning" class="tab">
+      <div class="grid">
+        <div class="card"><h3>Problem</h3><p>Small creative businesses often have ideas but need simple ways to turn each project into a repeatable process.</p></div>
+        <div class="card"><h3>Prototype</h3><p>I built an interactive mini-tool that connects sourcing, pricing and product storytelling in one place.</p></div>
+        <div class="card"><h3>AI workflow</h3><p>AI can help brainstorm product names, listing language, customer questions and business experiments while the owner makes the final creative decisions.</p></div>
+      </div>
+      <div class="section-title">Build process</div>
+      <div class="timeline"><div class="step"><b>01 — Find</b><span class="muted">Spot useful materials others overlook.</span></div><div class="step"><b>02 — Make</b><span class="muted">Repair and redesign with a clear purpose.</span></div><div class="step"><b>03 — Price</b><span class="muted">Track material and labor costs.</span></div><div class="step"><b>04 — Tell</b><span class="muted">Use the story to show the value created.</span></div></div>
+    </section>
+  </div>
+</main>
+<footer><b>ReMade / Upcycle Lab</b> is a concept project created to demonstrate learning in AI-assisted entrepreneurship, creative reuse and interactive web design. It is a prototype—not a deployed business or a claim of actual sales.</footer>
+</div>
+<script>
+const buttons=document.querySelectorAll('.tabbtn'); const tabs=document.querySelectorAll('.tab');
+buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')}));
+function money(n){return '$'+Math.round(n).toLocaleString()}
+document.getElementById('calc').addEventListener('click',()=>{const c=+cost.value||0,m=+materials.value||0,h=+hours.value||0,r=+rate.value||0;const total=c+m+h*r;document.getElementById('priceResult').innerHTML='<strong>'+money(total)+'</strong><div class="muted">Starting price = original cost + materials + '+h+' hours of labor at '+money(r)+'/hour. Adjust for uniqueness, condition, market demand and selling fees.</div>'});
+document.getElementById('generate').addEventListener('click',()=>{const name=document.getElementById('item').value.trim()||'Upcycled piece';const details=document.getElementById('details').value.trim()||'Thoughtfully repaired and redesigned for a new life.';document.getElementById('storyResult').innerHTML='<strong>'+name+'</strong><p>'+details+'</p><p class="muted">A one-of-a-kind upcycled piece with its original character thoughtfully preserved. Cleaned, repaired and redesigned by hand so a previously overlooked item can become useful again. Every piece is part of a small-scale creative reuse process: less waste, more character, and a product with a story.</p>'});
+</script>
+</body>
+</html>
